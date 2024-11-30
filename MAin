@@ -142,3 +142,46 @@ if _G.nshubStarted == nil then
 end
    end,
 })
+
+local skywa = Window:CreateTab("SkyWars 🔥", 4483362458) -- Title, Image
+local Section = skywa:CreateSection("Forge Hub")
+local Button = skywa:CreateButton({
+   Name = "Forge Hub (Key🔑)",
+   Callback = function()
+       --Toggles the infinite jump between on or off on every script run
+_G.skywa = not _G.skywa
+
+if _G.skywaStarted == nil then
+	--Ensures this only runs once to save resources
+	_G.skywaStarted = true
+	
+	--Notifies readiness
+	game.StarterGui:SetCore("SendNotification", {Title="Youtube Hub"; Text="Forge Hub Activated!"; Duration=5;})
+
+	--The actual infinite jump
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Skzuppy/forge-hub/main/loader.lua"))()
+end
+   end,
+})
+
+local fisch = Window:CreateTab("Fisch 🔥", 4483362458) -- Title, Image
+local Section = fisch:CreateSection("Forge Hub")
+local Button = fisch:CreateButton({
+   Name = "Forge Hub (Key🔑)",
+   Callback = function()
+       --Toggles the infinite jump between on or off on every script run
+_G.forge = not _G.forge
+
+if _G.forgeStarted == nil then
+	--Ensures this only runs once to save resources
+	_G.forgeStarted = true
+	
+	--Notifies readiness
+	game.StarterGui:SetCore("SendNotification", {Title="Youtube Hub"; Text="Forge Hub Activated!"; Duration=5;})
+
+	--The actual infinite jump
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Skzuppy/forge-hub/main/loader.lua"))()
+end
+   end,
+})
+
