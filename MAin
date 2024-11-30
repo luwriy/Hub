@@ -81,3 +81,64 @@ if _G.infinJumpStarted == nil then
 end
    end,
 })
+
+local Button = MainTab:CreateButton({
+   Name = "Aimbot/Esp V1",
+   Callback = function()
+       --Toggles the infinite jump between on or off on every script run
+_G.Aimbot = not _G.Aimbot
+
+if _G.AimbotStarted == nil then
+	--Ensures this only runs once to save resources
+	_G.AimbotStarted = true
+	
+	--Notifies readiness
+	game.StarterGui:SetCore("SendNotification", {Title="Youtube Hub"; Text="Aimbot Menu Activated!"; Duration=5;})
+
+	--The actual infinite jump
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Mick-gordon/Hyper-Escape/main/DeleteMobCheatEngine.lua"))()
+end
+   end,
+})
+
+local benpc = Window:CreateTab("[🍂] Be NPC or DIE!💢", 4483362458) -- Title, Image
+local Section = benpc:CreateSection("RocketHub")
+local Button = benpc:CreateButton({
+   Name = "Rocket Hub",
+   Callback = function()
+       --Toggles the infinite jump between on or off on every script run
+_G.rocket = not _G.rocket
+
+if _G.rocketStarted == nil then
+	--Ensures this only runs once to save resources
+	_G.rocketStarted = true
+	
+	--Notifies readiness
+	game.StarterGui:SetCore("SendNotification", {Title="Youtube Hub"; Text="Rocket Hub Activated!"; Duration=5;})
+
+	--The actual infinite jump
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Bac0nHck/Scripts/main/BeNpcOrDie"))("t.me/arceusxscripts")
+end
+   end,
+})
+
+local thest = Window:CreateTab("The Strongest Battlegrounds", 4483362458) -- Title, Image
+local Section = thest:CreateSection("NS Hub")
+local Button = thest:CreateButton({
+   Name = "NS Hub (Key🔑)",
+   Callback = function()
+       --Toggles the infinite jump between on or off on every script run
+_G.nshub = not _G.nshub
+
+if _G.nshubStarted == nil then
+	--Ensures this only runs once to save resources
+	_G.nshubStarted = true
+	
+	--Notifies readiness
+	game.StarterGui:SetCore("SendNotification", {Title="Youtube Hub"; Text="NS Hub Activated!"; Duration=5;})
+
+	--The actual infinite jump
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/OhhMyGehlee/TSBG/main/Solara"))()
+end
+   end,
+})
