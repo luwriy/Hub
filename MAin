@@ -101,6 +101,25 @@ end
    end,
 })
 
+local Button = MainTab:CreateButton({
+   Name = "Aimbot/Esp V2",
+   Callback = function()
+       --Toggles the infinite jump between on or off on every script run
+_G.Aimbot2 = not _G.Aimbot2
+
+if _G.Aimbot2tStarted == nil then
+	--Ensures this only runs once to save resources
+	_G.Aimbot2Started = true
+	
+	--Notifies readiness
+	game.StarterGui:SetCore("SendNotification", {Title="Youtube Hub"; Text="Aimbot Menu v2 Activated!"; Duration=5;})
+
+	--The actual infinite jump
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Mick-gordon/Hyper-Escape/main/DeleteMobV2.lua", true))()
+end
+   end,
+})
+
 local benpc = Window:CreateTab("[🍂] Be NPC or DIE!💢", 4483362458) -- Title, Image
 local Section = benpc:CreateSection("RocketHub")
 local Button = benpc:CreateButton({
